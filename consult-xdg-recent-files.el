@@ -122,7 +122,7 @@ https://www.freedesktop.org/wiki/Specifications/desktop-bookmark-spec/"
                                                        (point-max)))
                                             'bookmark))))
       (message "consult-xdg-recent-files: List of XDG recent files not found")
-      nil)))
+      '())))
 
 
 (defun consult-xdg-recent-files--recent-system-files ()
@@ -133,7 +133,7 @@ https://www.freedesktop.org/wiki/Specifications/desktop-bookmark-spec/"
     (t
      (message "consult-xdg-recent-files: \"%s\" system currently unsupported"
               system-type)
-     nil)))
+     '())))
 
 (defun consult-xdg-recent-files--recent-files-sort (file-list)
   "Sort the FILE-LIST by modification time, from most recent to least recent."
